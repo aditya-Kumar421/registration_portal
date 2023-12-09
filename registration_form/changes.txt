@@ -47,3 +47,6 @@ recaptcha secret and public key
         #     return Response({'success': True})
         # return Response({'error': "reCAPTCHA verification failed"}, status=400)
 
+
+# DEBUG = False
+# SECRET_KEY = 'django-insecure-dt%(%q0%i7t2ks=fte$jj6wa%&u@(2&^-jyz=#$w()s*)7r5_x'
