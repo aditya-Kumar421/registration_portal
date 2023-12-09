@@ -1,0 +1,25 @@
+recaptcha secret and public key
+
+"captcha": {
+        "key": "6Lcd2CMpAAAAAKLqwdxjTgnWwzSgAGEgtl0BVOng",
+        "value": "6Lcd2CMpAAAAAKLqwdxjTgnWwzSgAGEgtl0BVOng"
+    }
+
+#views.py
+# class CaptchaCheck(APIView):
+#     def post(self, request):
+#         serializer = CaptchaSerializer(data=request.data)
+#         if serializer.is_valid():
+#             # Validate the reCAPTCHA token
+#             captcha_token = serializer.validated_data['captcha']
+#             return Response({'success': True})
+#         return Response(serializer.errors, status=400)
+
+#serailizer.py:
+# from captcha.fields import CaptchaField
+# from captcha.widgets import ReCaptchaV2Checkbox
+# from rest_framework_recaptcha.fields import ReCaptchaField
+
+# class CaptchaSerializer(serializers.ModelSerializer):
+#     captcha = CaptchaField()
+
