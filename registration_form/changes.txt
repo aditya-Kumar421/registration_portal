@@ -52,3 +52,6 @@ recaptcha secret and public key
 # SECRET_KEY = 'django-insecure-dt%(%q0%i7t2ks=fte$jj6wa%&u@(2&^-jyz=#$w()s*)7r5_x'
 
 url(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+
+MEDIA_ROOT = BASE_DIR /'media'
+MEDIA_URL = "/media/"
