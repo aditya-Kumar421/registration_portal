@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 # from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,11 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECURITY WARNING: don't run with debug turned on in production!
+
 # DEBUG = config('DEBUG', cast=bool) 
 # SECRET_KEY = config('SECRET_KEY')
-ALLOWED_HOSTS = ["*"]
+
+
 DEBUG = False
 SECRET_KEY = 'django-insecure-dt%(%q0%i7t2ks=fte$jj6wa%&u@(2&^-jyz=#$w()s*)7r5_x'
+
+ALLOWED_HOSTS = ["techbuzz.onrender.com"]
 
 # Application definition
 
@@ -39,8 +44,8 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework',
     'captcha',
-    # "rest_framework_recaptcha",
     'registration_form',
+    'djangosecure',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,10 +145,13 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_SSL_REDIRECT = True
 
 # 3.HTTP Strict Transport Security (HSTS):
-SECURE_HSTS_SECONDS = 86400
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 31536000  
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True 
+SECURE_HSTS_PRELOAD = True 
 
 # 4.Cross-site request forgery (CSRF) protection:
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+#5.CSP:
+CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
+# CSP_SCRIPT_SRC = ("'self'", "scripts.com")
