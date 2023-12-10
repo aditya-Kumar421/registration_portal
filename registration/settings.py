@@ -76,7 +76,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'registration.wsgi.application'
-
+#recaptcha : 
+RECAPTCHA_PUBLIC_KEY = '6Lcd2CMpAAAAAKLqwdxjTgnWwzSgAGEgtl0BVOng'
+RECAPTCHA_PRIVATE_KEY = '6Lcd2CMpAAAAAKHPuV4UCQ2I5akmbKTvu36XZ5lm'
+APPEND_SLASH = False
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -87,11 +90,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+#added for REDIS
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://techbuzz.onrender.com/admin/',
+        'LOCATION': 'redis://redis:6379',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -140,10 +143,7 @@ STATIC_ROOT = 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CSRF_TRUSTED_ORIGINS = ['https://techbuzz.onrender.com']
-#recaptcha : 
-RECAPTCHA_PUBLIC_KEY = '6Lcd2CMpAAAAAKLqwdxjTgnWwzSgAGEgtl0BVOng'
-RECAPTCHA_PRIVATE_KEY = '6Lcd2CMpAAAAAKHPuV4UCQ2I5akmbKTvu36XZ5lm'
-APPEND_SLASH = False
+
 
 
 #1.Cross-site Scripting (XSS):
