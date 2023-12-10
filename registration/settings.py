@@ -163,5 +163,5 @@ SECURE_HSTS_PRELOAD = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 #5.CSP:
-CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
+# CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
 # CSP_SCRIPT_SRC = ("'self'", "scripts.com")
