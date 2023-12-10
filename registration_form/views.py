@@ -11,6 +11,7 @@ from django.conf import settings
 class RegistrationList(APIView):
     def post(self, request,*args, **kwargs):
         serializer = RegistrationSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
         captcha_token = request.data.get('captcha', '')
         data = {
             'secret': settings.RECAPTCHA_PRIVATE_KEY,
@@ -21,8 +22,8 @@ class RegistrationList(APIView):
         result = response.json()
 
         if result['success']:
-            serializer.is_valid(raise_exception=True)
+            
             serializer.save()
-            return Response({'success': True},{"message": "Registration successful"}, status=status.HTTP_201_CREATED)
+            return Response({'success': True, 'message': 'Registration successful'}, status=status.HTTP_201_CREATED)
         return Response({'error': "reCAPTCHA verification failed"}, status=400)
 

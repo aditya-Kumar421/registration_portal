@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-dt%(%q0%i7t2ks=fte$jj6wa%&u@(2&^-jyz=#$w()s*)7r5_x
 
 
 ALLOWED_HOSTS = ["techbuzz.onrender.com","https://techbuzz.onrender.com/admin/", "https://techbuzz.onrender.com/api/registration/"]
-
+#"127.0.0.1",
 # Application definition
 
 INSTALLED_APPS = [
@@ -161,6 +161,6 @@ SECURE_HSTS_PRELOAD = True
 # 4.Cross-site request forgery (CSRF) protection:
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-#5.CSP:
+# 5.CSP:
 CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
 # CSP_SCRIPT_SRC = ("'self'", "scripts.com")
