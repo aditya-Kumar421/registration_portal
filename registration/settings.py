@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-dt%(%q0%i7t2ks=fte$jj6wa%&u@(2&^-jyz=#$w()s*)7r5_x
 # SECRET_KEY = config('SECRET_KEY')
 
 
-ALLOWED_HOSTS = ["https://techbuzz.onrender.com/admin/", "https://techbuzz.onrender.com/api/registration/"]
+ALLOWED_HOSTS = ["techbuzz.onrender.com","https://techbuzz.onrender.com/admin/", "https://techbuzz.onrender.com/api/registration/"]
 
 # Application definition
 
