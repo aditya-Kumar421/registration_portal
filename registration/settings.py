@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-dt%(%q0%i7t2ks=fte$jj6wa%&u@(2&^-jyz=#$w()s*)7r5_x
 # SECRET_KEY = config('SECRET_KEY')
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://techbuzz.onrender.com/admin/", "https://techbuzz.onrender.com/api/registration/"]
 
 # Application definition
 
@@ -88,6 +88,15 @@ DATABASES = {
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://techbuzz.onrender.com/admin/',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -153,5 +162,5 @@ SECURE_HSTS_PRELOAD = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 #5.CSP:
-# CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
+CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
 # CSP_SCRIPT_SRC = ("'self'", "scripts.com")
