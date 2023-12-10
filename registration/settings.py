@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+# from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -130,7 +130,7 @@ STATIC_ROOT = 'staticfiles'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CSRF_TRUSTED_ORIGINS = ['https://techbuzz.onrender.com']
+# CSRF_TRUSTED_ORIGINS = ['https://techbuzz.onrender.com']
 #recaptcha : 
 RECAPTCHA_PUBLIC_KEY = '6Lcd2CMpAAAAAKLqwdxjTgnWwzSgAGEgtl0BVOng'
 RECAPTCHA_PRIVATE_KEY = '6Lcd2CMpAAAAAKHPuV4UCQ2I5akmbKTvu36XZ5lm'
