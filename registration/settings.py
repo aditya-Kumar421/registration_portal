@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 SECRET_KEY = 'django-insecure-dt%(%q0%i7t2ks=fte$jj6wa%&u@(2&^-jyz=#$w()s*)7r5_x'
 # SECRET_KEY = config('SECRET_KEY')
 
 
-ALLOWED_HOSTS = ['127.0.0.1',"techbuzz.onrender.com","https://techbuzz.onrender.com/admin/", "https://techbuzz.onrender.com/api/registration/"]
+ALLOWED_HOSTS = ["techbuzz.onrender.com","https://techbuzz.onrender.com/admin/", "https://techbuzz.onrender.com/api/registration/"]
 #"127.0.0.1",
 # Application definition
 
@@ -147,21 +147,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # 1.Cross-site Scripting (XSS):
-# SECURE_BROWSER_XSS_FILTER = True
-# SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
 
-# # # 2.SSL redirect:
-# # SECURE_SSL_REDIRECT = True
+# # 2.SSL redirect:
+SECURE_SSL_REDIRECT = True
 
-# # # 3.HTTP Strict Transport Security (HSTS):
-# SECURE_HSTS_SECONDS = 31536000
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True 
-# SECURE_HSTS_PRELOAD = True 
+# # 3.HTTP Strict Transport Security (HSTS):
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True 
+SECURE_HSTS_PRELOAD = True 
 
-# # # 4.Cross-site request forgery (CSRF) protection:
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+# # 4.Cross-site request forgery (CSRF) protection:
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
-# # # 5.CSP:
-# CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
+# # 5.CSP:
+CSP_DEFAULT_SRC = ("'self'", "techbuzz.onrender.com")
 # CSP_SCRIPT_SRC = ("'self'", "scripts.com")
